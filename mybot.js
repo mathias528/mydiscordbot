@@ -8,8 +8,7 @@ client.on("message", (message) => {
 
 var admin = require("firebase-admin");
 
-var serviceAccount = require("https://github.com/mathias528/Madden-Companion-Exporter/blob/master/madden-project-67765-firebase-adminsdk-q66tt-1aea6b2f42.json");
-
+const serviceAccount = require("./madden-project-67765-firebase-adminsdk-q66tt-1aea6b2f42.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://madden-project-67765.firebaseio.com"
